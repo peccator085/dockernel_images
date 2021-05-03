@@ -1,0 +1,3 @@
+FROM condaforge/mambaforge:latest
+RUN mamba install sage==9.2 "givaro=4.1.1=h192cbe9_1" -c conda-forge -y
+CMD sage --python -m sage.repl.ipython_kernel -f $DOCKERNEL_CONNECTION_FILE
